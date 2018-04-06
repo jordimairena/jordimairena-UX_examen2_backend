@@ -1,0 +1,1039 @@
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (10.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (10.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateClimas (20180405235728)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateClimas (20180405235728)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateClimas (20180405235910)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "climas" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "ciudad" varchar, "temp" integer, "estado" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180405235910"]]
+  [1m[35m (11.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-04-05 23:59:14.418463"], ["updated_at", "2018-04-05 23:59:14.418463"]]
+  [1m[35m (8.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "climas" ("ciudad", "temp", "estado", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["ciudad", "Tegucigalpa"], ["temp", 32], ["estado", "lluvioso"], ["created_at", "2018-04-06 00:04:29.037860"], ["updated_at", "2018-04-06 00:04:29.037860"]]
+  [1m[35m (7.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "climas" ("ciudad", "temp", "estado", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["ciudad", "San Pedro Sula"], ["temp", 36], ["estado", "Soleado"], ["created_at", "2018-04-06 00:04:29.047945"], ["updated_at", "2018-04-06 00:04:29.047945"]]
+  [1m[35m (7.8ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/" for ::1 at 2018-04-05 18:07:14 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/jordimairena/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/railties-5.1.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/jordimairena/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/railties-5.1.6/lib/rails/templates/rails/welcome/index.html.erb (1.9ms)
+Completed 200 OK in 27ms (Views: 5.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/favicon.ico" for ::1 at 2018-04-05 18:07:14 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/climas" for 127.0.0.1 at 2018-04-05 18:07:51 -0600
+Processing by ClimasController#index as */*
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant ClimasController::CLima):
+  
+app/controllers/climas_controller.rb:3:in `index'
+Started GET "/clima:" for 127.0.0.1 at 2018-04-05 18:08:21 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/clima:"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/climas" for ::1 at 2018-04-05 18:08:40 -0600
+Processing by ClimasController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant ClimasController::CLima):
+  
+app/controllers/climas_controller.rb:3:in `index'
+Started GET "/climas" for ::1 at 2018-04-05 18:09:04 -0600
+Processing by ClimasController#index as HTML
+  [1m[36mClima Load (0.1ms)[0m  [1m[34mSELECT "climas".* FROM "climas"[0m
+Completed 200 OK in 11ms (Views: 9.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/clima:" for 127.0.0.1 at 2018-04-05 18:09:27 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/clima:"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/climas" for 127.0.0.1 at 2018-04-05 18:09:36 -0600
+Processing by ClimasController#index as */*
+  [1m[36mClima Load (0.1ms)[0m  [1m[34mSELECT "climas".* FROM "climas"[0m
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/climas" for ::1 at 2018-04-05 18:09:42 -0600
+Processing by ClimasController#index as HTML
+  [1m[36mClima Load (0.3ms)[0m  [1m[34mSELECT "climas".* FROM "climas"[0m
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/climas" for 127.0.0.1 at 2018-04-05 18:13:06 -0600
+Processing by Api::V1::ClimasController#index as */*
+  [1m[36mClima Load (0.2ms)[0m  [1m[34mSELECT "climas".* FROM "climas"[0m
+Completed 200 OK in 8ms (Views: 5.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/v1/climas" for ::1 at 2018-04-05 18:13:17 -0600
+Processing by Api::V1::ClimasController#index as HTML
+  [1m[36mClima Load (0.3ms)[0m  [1m[34mSELECT "climas".* FROM "climas"[0m
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/climas" for ::1 at 2018-04-05 18:50:12 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::ClimasController#index as HTML
+  [1m[36mClima Load (0.1ms)[0m  [1m[34mSELECT "climas".* FROM "climas" ORDER BY created_at DESC[0m
+Completed 200 OK in 7ms (Views: 4.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/climas" for ::1 at 2018-04-05 18:58:10 -0600
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::ClimasController#index as HTML
+  [1m[36mClima Load (0.1ms)[0m  [1m[34mSELECT "climas".* FROM "climas" ORDER BY created_at DESC[0m
+Completed 200 OK in 9ms (Views: 6.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/climas" for ::1 at 2018-04-05 19:05:38 -0600
+Processing by Api::V1::ClimasController#index as HTML
+  [1m[36mClima Load (0.1ms)[0m  [1m[34mSELECT "climas".* FROM "climas" ORDER BY created_at DESC[0m
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/climas" for ::1 at 2018-04-05 19:07:39 -0600
+Processing by Api::V1::ClimasController#index as HTML
+  [1m[36mClima Load (0.3ms)[0m  [1m[34mSELECT "climas".* FROM "climas" ORDER BY created_at DESC[0m
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/climas" for ::1 at 2018-04-05 19:11:48 -0600
+Processing by Api::V1::ClimasController#index as HTML
+  [1m[36mClima Load (0.3ms)[0m  [1m[34mSELECT "climas".* FROM "climas" ORDER BY created_at DESC[0m
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/climas" for ::1 at 2018-04-05 19:13:06 -0600
+Processing by Api::V1::ClimasController#index as HTML
+  [1m[36mClima Load (0.2ms)[0m  [1m[34mSELECT "climas".* FROM "climas" ORDER BY created_at DESC[0m
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/climas" for ::1 at 2018-04-05 19:13:10 -0600
+Processing by Api::V1::ClimasController#index as HTML
+  [1m[36mClima Load (0.2ms)[0m  [1m[34mSELECT "climas".* FROM "climas" ORDER BY created_at DESC[0m
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/climas" for ::1 at 2018-04-05 19:13:18 -0600
+Processing by Api::V1::ClimasController#index as HTML
+  [1m[36mClima Load (0.3ms)[0m  [1m[34mSELECT "climas".* FROM "climas" ORDER BY created_at DESC[0m
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/climas" for ::1 at 2018-04-05 19:20:20 -0600
+Processing by Api::V1::ClimasController#index as HTML
+  [1m[36mClima Load (0.2ms)[0m  [1m[34mSELECT "climas".* FROM "climas" ORDER BY created_at DESC[0m
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/climas" for ::1 at 2018-04-05 19:22:34 -0600
+Processing by Api::V1::ClimasController#index as HTML
+  [1m[36mClima Load (0.3ms)[0m  [1m[34mSELECT "climas".* FROM "climas" ORDER BY created_at DESC[0m
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/climas" for ::1 at 2018-04-05 19:23:04 -0600
+Processing by Api::V1::ClimasController#index as HTML
+  [1m[36mClima Load (0.6ms)[0m  [1m[34mSELECT "climas".* FROM "climas" ORDER BY created_at DESC[0m
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/v1/climas" for ::1 at 2018-04-05 19:28:31 -0600
+Processing by Api::V1::ClimasController#index as HTML
+  [1m[36mClima Load (0.3ms)[0m  [1m[34mSELECT "climas".* FROM "climas" ORDER BY created_at DESC[0m
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/climas.json" for ::1 at 2018-04-05 19:31:34 -0600
+Processing by Api::V1::ClimasController#index as JSON
+  [1m[36mClima Load (0.3ms)[0m  [1m[34mSELECT "climas".* FROM "climas" ORDER BY created_at DESC[0m
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/climas.json" for ::1 at 2018-04-05 19:31:54 -0600
+Processing by Api::V1::ClimasController#index as JSON
+  [1m[36mClima Load (0.2ms)[0m  [1m[34mSELECT "climas".* FROM "climas" ORDER BY created_at DESC[0m
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/api/v1/climas" for ::1 at 2018-04-05 19:31:56 -0600
+Processing by Api::V1::ClimasController#create as HTML
+  Parameters: {"clima"=>{"ciudad"=>"", "temp"=>"", "estado"=>""}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "climas" ("ciudad", "estado", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["ciudad", ""], ["estado", ""], ["created_at", "2018-04-06 01:31:56.219781"], ["updated_at", "2018-04-06 01:31:56.219781"]]
+  [1m[35m (10.8ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 16ms (Views: 0.3ms | ActiveRecord: 11.8ms)
+
+
+Started GET "/api/v1/climas.json" for ::1 at 2018-04-05 19:32:26 -0600
+Processing by Api::V1::ClimasController#index as JSON
+  [1m[36mClima Load (0.3ms)[0m  [1m[34mSELECT "climas".* FROM "climas" ORDER BY created_at DESC[0m
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/climas.json" for ::1 at 2018-04-05 19:33:42 -0600
+Processing by Api::V1::ClimasController#index as JSON
+  [1m[36mClima Load (0.9ms)[0m  [1m[34mSELECT "climas".* FROM "climas" ORDER BY created_at DESC[0m
+Completed 200 OK in 7ms (Views: 3.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/v1/climas.json" for ::1 at 2018-04-05 19:36:54 -0600
+Processing by Api::V1::ClimasController#index as JSON
+  [1m[36mClima Load (0.6ms)[0m  [1m[34mSELECT "climas".* FROM "climas" ORDER BY created_at DESC[0m
+Completed 200 OK in 7ms (Views: 5.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/v1/climas.json" for ::1 at 2018-04-05 19:38:16 -0600
+Processing by Api::V1::ClimasController#index as JSON
+  [1m[36mClima Load (0.2ms)[0m  [1m[34mSELECT "climas".* FROM "climas" ORDER BY created_at DESC[0m
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/climas.json" for ::1 at 2018-04-05 19:38:52 -0600
+Processing by Api::V1::ClimasController#index as JSON
+  [1m[36mClima Load (0.2ms)[0m  [1m[34mSELECT "climas".* FROM "climas" ORDER BY created_at DESC[0m
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/api/v1/climas" for ::1 at 2018-04-05 19:39:09 -0600
+Processing by Api::V1::ClimasController#create as HTML
+  Parameters: {"clima"=>{"ciudad"=>"", "temp"=>"", "estado"=>""}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.4ms)[0m  [1m[32mINSERT INTO "climas" ("ciudad", "estado", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["ciudad", ""], ["estado", ""], ["created_at", "2018-04-06 01:39:09.706740"], ["updated_at", "2018-04-06 01:39:09.706740"]]
+  [1m[35m (7.6ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 16ms (Views: 0.4ms | ActiveRecord: 9.1ms)
+
+
+Started GET "/api/v1/climas.json" for ::1 at 2018-04-05 19:39:11 -0600
+Processing by Api::V1::ClimasController#index as JSON
+  [1m[36mClima Load (0.3ms)[0m  [1m[34mSELECT "climas".* FROM "climas" ORDER BY created_at DESC[0m
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/climas.json" for ::1 at 2018-04-05 19:53:15 -0600
+Processing by Api::V1::ClimasController#index as JSON
+  [1m[36mClima Load (0.8ms)[0m  [1m[34mSELECT "climas".* FROM "climas" ORDER BY created_at DESC[0m
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/api/v1/climas" for ::1 at 2018-04-05 19:53:17 -0600
+Processing by Api::V1::ClimasController#create as HTML
+  Parameters: {"clima"=>{"ciudad"=>"", "temp"=>"", "estado"=>""}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "climas" ("ciudad", "estado", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["ciudad", ""], ["estado", ""], ["created_at", "2018-04-06 01:53:17.387959"], ["updated_at", "2018-04-06 01:53:17.387959"]]
+  [1m[35m (51.9ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 68ms (Views: 11.5ms | ActiveRecord: 52.6ms)
+
+
+Started GET "/api/v1/climas.json" for ::1 at 2018-04-05 19:57:25 -0600
+Processing by Api::V1::ClimasController#index as JSON
+  [1m[36mClima Load (0.3ms)[0m  [1m[34mSELECT "climas".* FROM "climas" ORDER BY created_at DESC[0m
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/api/v1/climas" for ::1 at 2018-04-05 19:57:29 -0600
+Processing by Api::V1::ClimasController#create as HTML
+  Parameters: {"clima"=>{"ciudad"=>"", "temp"=>"", "estado"=>""}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "climas" ("ciudad", "estado", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["ciudad", ""], ["estado", ""], ["created_at", "2018-04-06 01:57:29.480655"], ["updated_at", "2018-04-06 01:57:29.480655"]]
+  [1m[35m (9.8ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 14ms (Views: 0.8ms | ActiveRecord: 10.4ms)
+
+
+Started GET "/api/v1/climas.json" for ::1 at 2018-04-05 19:59:16 -0600
+Processing by Api::V1::ClimasController#index as JSON
+  [1m[36mClima Load (0.3ms)[0m  [1m[34mSELECT "climas".* FROM "climas" ORDER BY created_at DESC[0m
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/climas.json" for ::1 at 2018-04-05 19:59:46 -0600
+Processing by Api::V1::ClimasController#index as JSON
+  [1m[36mClima Load (0.3ms)[0m  [1m[34mSELECT "climas".* FROM "climas" ORDER BY created_at DESC[0m
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/climas.json" for ::1 at 2018-04-05 20:00:36 -0600
+Processing by Api::V1::ClimasController#index as JSON
+  [1m[36mClima Load (0.3ms)[0m  [1m[34mSELECT "climas".* FROM "climas" ORDER BY created_at DESC[0m
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/climas.json" for ::1 at 2018-04-05 20:01:18 -0600
+Processing by Api::V1::ClimasController#index as JSON
+  [1m[36mClima Load (0.3ms)[0m  [1m[34mSELECT "climas".* FROM "climas" ORDER BY created_at DESC[0m
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/climas" for ::1 at 2018-04-05 20:04:38 -0600
+Processing by Api::V1::ClimasController#index as HTML
+  [1m[36mClima Load (0.1ms)[0m  [1m[34mSELECT "climas".* FROM "climas" ORDER BY created_at DESC[0m
+Completed 200 OK in 9ms (Views: 6.1ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/api/v1/climas" for ::1 at 2018-04-05 20:05:03 -0600
+Processing by Api::V1::ClimasController#create as HTML
+  Parameters: {"clima"=>{"ciudad"=>"", "temp"=>"", "estado"=>""}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "climas" ("ciudad", "estado", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["ciudad", ""], ["estado", ""], ["created_at", "2018-04-06 02:05:03.758248"], ["updated_at", "2018-04-06 02:05:03.758248"]]
+  [1m[35m (25.0ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 30ms (Views: 0.3ms | ActiveRecord: 26.1ms)
+
+
+Started GET "/api/v1/climas" for ::1 at 2018-04-05 20:05:07 -0600
+Processing by Api::V1::ClimasController#index as HTML
+  [1m[36mClima Load (0.3ms)[0m  [1m[34mSELECT "climas".* FROM "climas" ORDER BY created_at DESC[0m
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/climas.json" for ::1 at 2018-04-05 20:09:41 -0600
+Processing by Api::V1::ClimasController#index as JSON
+  [1m[36mClima Load (0.3ms)[0m  [1m[34mSELECT "climas".* FROM "climas" ORDER BY created_at DESC[0m
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/api/v1/climas" for ::1 at 2018-04-05 20:09:44 -0600
+Processing by Api::V1::ClimasController#create as HTML
+  Parameters: {"clima"=>{"ciudad"=>"", "temp"=>"", "estado"=>""}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "climas" ("ciudad", "estado", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["ciudad", ""], ["estado", ""], ["created_at", "2018-04-06 02:09:44.150717"], ["updated_at", "2018-04-06 02:09:44.150717"]]
+  [1m[35m (10.3ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 15ms (Views: 0.5ms | ActiveRecord: 11.2ms)
+
+
+Started GET "/api/v1/climas.json" for ::1 at 2018-04-05 20:10:01 -0600
+Processing by Api::V1::ClimasController#index as JSON
+  [1m[36mClima Load (0.4ms)[0m  [1m[34mSELECT "climas".* FROM "climas" ORDER BY created_at DESC[0m
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/api/v1/climas" for ::1 at 2018-04-05 20:10:04 -0600
+Processing by Api::V1::ClimasController#create as HTML
+  Parameters: {"clima"=>{"ciudad"=>"", "temp"=>"", "estado"=>""}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "climas" ("ciudad", "estado", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["ciudad", ""], ["estado", ""], ["created_at", "2018-04-06 02:10:04.609303"], ["updated_at", "2018-04-06 02:10:04.609303"]]
+  [1m[35m (11.4ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 15ms (Views: 0.4ms | ActiveRecord: 12.0ms)
+
+
+Started PUT "/api/v1/climas/9" for ::1 at 2018-04-05 20:10:11 -0600
+Processing by Api::V1::ClimasController#update as HTML
+  Parameters: {"clima"=>{"ciudad"=>"La Ceiba", "temp"=>nil, "estado"=>""}, "id"=>"9"}
+  [1m[36mClima Load (0.2ms)[0m  [1m[34mSELECT  "climas".* FROM "climas" WHERE "climas"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "climas" SET "ciudad" = ?, "updated_at" = ? WHERE "climas"."id" = ?[0m  [["ciudad", "La Ceiba"], ["updated_at", "2018-04-06 02:10:11.174300"], ["id", 9]]
+  [1m[35m (8.7ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 54ms (Views: 0.9ms | ActiveRecord: 9.6ms)
+
+
+Started PUT "/api/v1/climas/9" for ::1 at 2018-04-05 20:10:15 -0600
+Processing by Api::V1::ClimasController#update as HTML
+  Parameters: {"clima"=>{"ciudad"=>"La Ceiba", "temp"=>nil, "estado"=>""}, "id"=>"9"}
+  [1m[36mClima Load (0.2ms)[0m  [1m[34mSELECT  "climas".* FROM "climas" WHERE "climas"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/climas.json" for ::1 at 2018-04-05 20:11:16 -0600
+Processing by Api::V1::ClimasController#index as JSON
+  [1m[36mClima Load (0.3ms)[0m  [1m[34mSELECT "climas".* FROM "climas" ORDER BY created_at DESC[0m
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/climas.json" for ::1 at 2018-04-05 20:11:34 -0600
+Processing by Api::V1::ClimasController#index as JSON
+  [1m[36mClima Load (0.4ms)[0m  [1m[34mSELECT "climas".* FROM "climas" ORDER BY created_at DESC[0m
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/api/v1/climas" for ::1 at 2018-04-05 20:11:36 -0600
+Processing by Api::V1::ClimasController#create as HTML
+  Parameters: {"clima"=>{"ciudad"=>"", "temp"=>"", "estado"=>""}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "climas" ("ciudad", "estado", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["ciudad", ""], ["estado", ""], ["created_at", "2018-04-06 02:11:36.862880"], ["updated_at", "2018-04-06 02:11:36.862880"]]
+  [1m[35m (9.3ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 13ms (Views: 0.3ms | ActiveRecord: 10.3ms)
+
+
+Started PUT "/api/v1/climas/10" for ::1 at 2018-04-05 20:11:54 -0600
+Processing by Api::V1::ClimasController#update as HTML
+  Parameters: {"clima"=>{"ciudad"=>"Yoro", "temp"=>nil, "estado"=>""}, "id"=>"10"}
+  [1m[36mClima Load (0.2ms)[0m  [1m[34mSELECT  "climas".* FROM "climas" WHERE "climas"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[33mUPDATE "climas" SET "ciudad" = ?, "updated_at" = ? WHERE "climas"."id" = ?[0m  [["ciudad", "Yoro"], ["updated_at", "2018-04-06 02:11:54.311914"], ["id", 10]]
+  [1m[35m (8.4ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 16ms (Views: 0.4ms | ActiveRecord: 10.0ms)
+
+
+Started PUT "/api/v1/climas/10" for ::1 at 2018-04-05 20:11:59 -0600
+Processing by Api::V1::ClimasController#update as HTML
+  Parameters: {"clima"=>{"ciudad"=>"Yoro", "temp"=>nil, "estado"=>""}, "id"=>"10"}
+  [1m[36mClima Load (0.2ms)[0m  [1m[34mSELECT  "climas".* FROM "climas" WHERE "climas"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.3ms)
+
+
+Started PUT "/api/v1/climas/10" for ::1 at 2018-04-05 20:12:03 -0600
+Processing by Api::V1::ClimasController#update as HTML
+  Parameters: {"clima"=>{"ciudad"=>"Yoro", "temp"=>nil, "estado"=>""}, "id"=>"10"}
+  [1m[36mClima Load (0.2ms)[0m  [1m[34mSELECT  "climas".* FROM "climas" WHERE "climas"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started PUT "/api/v1/climas/10" for ::1 at 2018-04-05 20:12:05 -0600
+Processing by Api::V1::ClimasController#update as HTML
+  Parameters: {"clima"=>{"ciudad"=>"Yoro", "temp"=>nil, "estado"=>""}, "id"=>"10"}
+  [1m[36mClima Load (0.2ms)[0m  [1m[34mSELECT  "climas".* FROM "climas" WHERE "climas"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.3ms)
+
+
+Started PUT "/api/v1/climas/10" for ::1 at 2018-04-05 20:12:25 -0600
+Processing by Api::V1::ClimasController#update as HTML
+  Parameters: {"clima"=>{"ciudad"=>"Yoro", "temp"=>nil, "estado"=>""}, "id"=>"10"}
+  [1m[36mClima Load (0.1ms)[0m  [1m[34mSELECT  "climas".* FROM "climas" WHERE "climas"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/api/v1/climas/10" for ::1 at 2018-04-05 20:12:30 -0600
+Processing by Api::V1::ClimasController#update as HTML
+  Parameters: {"clima"=>{"ciudad"=>"Yoro", "temp"=>nil, "estado"=>""}, "id"=>"10"}
+  [1m[36mClima Load (0.3ms)[0m  [1m[34mSELECT  "climas".* FROM "climas" WHERE "climas"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.4ms)
+
+
+Started PUT "/api/v1/climas/10" for ::1 at 2018-04-05 20:12:34 -0600
+Processing by Api::V1::ClimasController#update as HTML
+  Parameters: {"clima"=>{"ciudad"=>"Yoro", "temp"=>nil, "estado"=>""}, "id"=>"10"}
+  [1m[36mClima Load (0.2ms)[0m  [1m[34mSELECT  "climas".* FROM "climas" WHERE "climas"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started PUT "/api/v1/climas/10" for ::1 at 2018-04-05 20:13:22 -0600
+Processing by Api::V1::ClimasController#update as HTML
+  Parameters: {"clima"=>{"ciudad"=>"Yoro", "temp"=>nil, "estado"=>""}, "id"=>"10"}
+  [1m[36mClima Load (0.2ms)[0m  [1m[34mSELECT  "climas".* FROM "climas" WHERE "climas"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/climas.json" for ::1 at 2018-04-05 20:13:42 -0600
+Processing by Api::V1::ClimasController#index as JSON
+  [1m[36mClima Load (0.3ms)[0m  [1m[34mSELECT "climas".* FROM "climas" ORDER BY created_at DESC[0m
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/climas.json" for ::1 at 2018-04-05 20:13:49 -0600
+Processing by Api::V1::ClimasController#index as JSON
+  [1m[36mClima Load (0.3ms)[0m  [1m[34mSELECT "climas".* FROM "climas" ORDER BY created_at DESC[0m
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/api/v1/climas" for ::1 at 2018-04-05 20:13:53 -0600
+Processing by Api::V1::ClimasController#create as HTML
+  Parameters: {"clima"=>{"ciudad"=>"", "temp"=>"", "estado"=>""}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "climas" ("ciudad", "estado", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["ciudad", ""], ["estado", ""], ["created_at", "2018-04-06 02:13:53.857914"], ["updated_at", "2018-04-06 02:13:53.857914"]]
+  [1m[35m (17.6ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 21ms (Views: 0.4ms | ActiveRecord: 18.3ms)
+
+
+Started PUT "/api/v1/climas/11" for ::1 at 2018-04-05 20:14:02 -0600
+Processing by Api::V1::ClimasController#update as HTML
+  Parameters: {"clima"=>{"ciudad"=>"Trujillo", "temp"=>nil, "estado"=>""}, "id"=>"11"}
+  [1m[36mClima Load (0.1ms)[0m  [1m[34mSELECT  "climas".* FROM "climas" WHERE "climas"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "climas" SET "ciudad" = ?, "updated_at" = ? WHERE "climas"."id" = ?[0m  [["ciudad", "Trujillo"], ["updated_at", "2018-04-06 02:14:02.650535"], ["id", 11]]
+  [1m[35m (8.4ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 14ms (Views: 0.6ms | ActiveRecord: 9.0ms)
+
+
+Started PUT "/api/v1/climas/11" for ::1 at 2018-04-05 20:14:04 -0600
+Processing by Api::V1::ClimasController#update as HTML
+  Parameters: {"clima"=>{"ciudad"=>"Trujillo", "temp"=>nil, "estado"=>""}, "id"=>"11"}
+  [1m[36mClima Load (0.1ms)[0m  [1m[34mSELECT  "climas".* FROM "climas" WHERE "climas"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.3ms)
+
+
+Started PUT "/api/v1/climas/11" for ::1 at 2018-04-05 20:14:19 -0600
+Processing by Api::V1::ClimasController#update as HTML
+  Parameters: {"clima"=>{"ciudad"=>"Trujillo", "temp"=>"30", "estado"=>""}, "id"=>"11"}
+  [1m[36mClima Load (0.2ms)[0m  [1m[34mSELECT  "climas".* FROM "climas" WHERE "climas"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "climas" SET "temp" = ?, "updated_at" = ? WHERE "climas"."id" = ?[0m  [["temp", 30], ["updated_at", "2018-04-06 02:14:19.852630"], ["id", 11]]
+  [1m[35m (10.9ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 16ms (Views: 0.3ms | ActiveRecord: 11.7ms)
+
+
+Started PUT "/api/v1/climas/11" for ::1 at 2018-04-05 20:14:20 -0600
+Processing by Api::V1::ClimasController#update as HTML
+  Parameters: {"clima"=>{"ciudad"=>"Trujillo", "temp"=>"30", "estado"=>""}, "id"=>"11"}
+  [1m[36mClima Load (0.1ms)[0m  [1m[34mSELECT  "climas".* FROM "climas" WHERE "climas"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/api/v1/climas/11" for ::1 at 2018-04-05 20:14:31 -0600
+Processing by Api::V1::ClimasController#update as HTML
+  Parameters: {"clima"=>{"ciudad"=>"Trujillo", "temp"=>"30", "estado"=>"Lluvioso"}, "id"=>"11"}
+  [1m[36mClima Load (0.1ms)[0m  [1m[34mSELECT  "climas".* FROM "climas" WHERE "climas"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "climas" SET "estado" = ?, "updated_at" = ? WHERE "climas"."id" = ?[0m  [["estado", "Lluvioso"], ["updated_at", "2018-04-06 02:14:31.659931"], ["id", 11]]
+  [1m[35m (8.1ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 14ms (Views: 0.3ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/api/v1/climas.json" for ::1 at 2018-04-05 20:16:57 -0600
+Processing by Api::V1::ClimasController#index as JSON
+  [1m[36mClima Load (0.2ms)[0m  [1m[34mSELECT "climas".* FROM "climas" ORDER BY created_at DESC[0m
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/climas.json" for ::1 at 2018-04-05 20:17:49 -0600
+Processing by Api::V1::ClimasController#index as JSON
+  [1m[36mClima Load (0.3ms)[0m  [1m[34mSELECT "climas".* FROM "climas" ORDER BY created_at DESC[0m
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/climas.json" for ::1 at 2018-04-05 20:19:24 -0600
+Processing by Api::V1::ClimasController#index as JSON
+  [1m[36mClima Load (1.2ms)[0m  [1m[34mSELECT "climas".* FROM "climas" ORDER BY created_at DESC[0m
+Completed 200 OK in 8ms (Views: 6.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/api/v1/climas.json" for ::1 at 2018-04-05 20:20:47 -0600
+Processing by Api::V1::ClimasController#index as JSON
+  [1m[36mClima Load (0.5ms)[0m  [1m[34mSELECT "climas".* FROM "climas" ORDER BY created_at DESC[0m
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/climas.json" for ::1 at 2018-04-05 20:23:31 -0600
+Processing by Api::V1::ClimasController#index as JSON
+  [1m[36mClima Load (0.2ms)[0m  [1m[34mSELECT "climas".* FROM "climas" ORDER BY created_at DESC[0m
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/api/v1/climas" for ::1 at 2018-04-05 20:23:50 -0600
+Processing by Api::V1::ClimasController#create as HTML
+  Parameters: {"clima"=>{"ciudad"=>"", "temp"=>"", "estado"=>""}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "climas" ("ciudad", "estado", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["ciudad", ""], ["estado", ""], ["created_at", "2018-04-06 02:23:50.604536"], ["updated_at", "2018-04-06 02:23:50.604536"]]
+  [1m[35m (6.8ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 11ms (Views: 0.5ms | ActiveRecord: 7.7ms)
+
+
+Started PUT "/api/v1/climas/12" for ::1 at 2018-04-05 20:23:57 -0600
+Processing by Api::V1::ClimasController#update as HTML
+  Parameters: {"clima"=>{"ciudad"=>"Copan", "temp"=>nil, "estado"=>""}, "id"=>"12"}
+  [1m[36mClima Load (0.1ms)[0m  [1m[34mSELECT  "climas".* FROM "climas" WHERE "climas"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "climas" SET "ciudad" = ?, "updated_at" = ? WHERE "climas"."id" = ?[0m  [["ciudad", "Copan"], ["updated_at", "2018-04-06 02:23:57.548469"], ["id", 12]]
+  [1m[35m (8.6ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 13ms (Views: 0.3ms | ActiveRecord: 8.9ms)
+
+
+Started PUT "/api/v1/climas/12" for ::1 at 2018-04-05 20:24:07 -0600
+Processing by Api::V1::ClimasController#update as HTML
+  Parameters: {"clima"=>{"ciudad"=>"Copan", "temp"=>nil, "estado"=>""}, "id"=>"12"}
+  [1m[36mClima Load (0.1ms)[0m  [1m[34mSELECT  "climas".* FROM "climas" WHERE "climas"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/api/v1/climas/12" for ::1 at 2018-04-05 20:24:11 -0600
+Processing by Api::V1::ClimasController#update as HTML
+  Parameters: {"clima"=>{"ciudad"=>"Copan", "temp"=>nil, "estado"=>""}, "id"=>"12"}
+  [1m[36mClima Load (0.2ms)[0m  [1m[34mSELECT  "climas".* FROM "climas" WHERE "climas"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started PUT "/api/v1/climas/12" for ::1 at 2018-04-05 20:24:37 -0600
+Processing by Api::V1::ClimasController#update as HTML
+  Parameters: {"clima"=>{"ciudad"=>"Copan", "temp"=>"28", "estado"=>""}, "id"=>"12"}
+  [1m[36mClima Load (0.3ms)[0m  [1m[34mSELECT  "climas".* FROM "climas" WHERE "climas"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "climas" SET "temp" = ?, "updated_at" = ? WHERE "climas"."id" = ?[0m  [["temp", 28], ["updated_at", "2018-04-06 02:24:37.643721"], ["id", 12]]
+  [1m[35m (9.3ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 15ms (Views: 0.5ms | ActiveRecord: 9.9ms)
+
+
+Started PUT "/api/v1/climas/12" for ::1 at 2018-04-05 20:24:39 -0600
+Processing by Api::V1::ClimasController#update as HTML
+  Parameters: {"clima"=>{"ciudad"=>"Copan", "temp"=>"28", "estado"=>""}, "id"=>"12"}
+  [1m[36mClima Load (0.1ms)[0m  [1m[34mSELECT  "climas".* FROM "climas" WHERE "climas"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/api/v1/climas/12" for ::1 at 2018-04-05 20:24:50 -0600
+Processing by Api::V1::ClimasController#update as HTML
+  Parameters: {"clima"=>{"ciudad"=>"Copan", "temp"=>"28", "estado"=>"soleado"}, "id"=>"12"}
+  [1m[36mClima Load (0.1ms)[0m  [1m[34mSELECT  "climas".* FROM "climas" WHERE "climas"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "climas" SET "estado" = ?, "updated_at" = ? WHERE "climas"."id" = ?[0m  [["estado", "soleado"], ["updated_at", "2018-04-06 02:24:50.283982"], ["id", 12]]
+  [1m[35m (8.3ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 13ms (Views: 0.4ms | ActiveRecord: 8.8ms)
+
+
+Started GET "/api/v1/climas.json" for ::1 at 2018-04-05 20:27:39 -0600
+Processing by Api::V1::ClimasController#index as JSON
+  [1m[36mClima Load (0.2ms)[0m  [1m[34mSELECT "climas".* FROM "climas" ORDER BY created_at DESC[0m
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/climas.json" for ::1 at 2018-04-05 20:28:03 -0600
+Processing by Api::V1::ClimasController#index as JSON
+  [1m[36mClima Load (0.3ms)[0m  [1m[34mSELECT "climas".* FROM "climas" ORDER BY created_at DESC[0m
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/climas.json" for ::1 at 2018-04-05 20:28:45 -0600
+Processing by Api::V1::ClimasController#index as JSON
+  [1m[36mClima Load (0.2ms)[0m  [1m[34mSELECT "climas".* FROM "climas" ORDER BY created_at DESC[0m
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/climas.json" for ::1 at 2018-04-05 20:30:20 -0600
+Processing by Api::V1::ClimasController#index as JSON
+  [1m[36mClima Load (0.2ms)[0m  [1m[34mSELECT "climas".* FROM "climas" ORDER BY created_at DESC[0m
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/climas.json" for ::1 at 2018-04-05 20:31:02 -0600
+Processing by Api::V1::ClimasController#index as JSON
+  [1m[36mClima Load (0.2ms)[0m  [1m[34mSELECT "climas".* FROM "climas" ORDER BY created_at DESC[0m
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/climas.json" for ::1 at 2018-04-05 20:32:01 -0600
+Processing by Api::V1::ClimasController#index as JSON
+  [1m[36mClima Load (0.4ms)[0m  [1m[34mSELECT "climas".* FROM "climas" ORDER BY created_at DESC[0m
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/api/v1/climas" for ::1 at 2018-04-05 20:32:04 -0600
+Processing by Api::V1::ClimasController#create as HTML
+  Parameters: {"clima"=>{"ciudad"=>"", "temp"=>"", "estado"=>""}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "climas" ("ciudad", "estado", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["ciudad", ""], ["estado", ""], ["created_at", "2018-04-06 02:32:04.931928"], ["updated_at", "2018-04-06 02:32:04.931928"]]
+  [1m[35m (10.0ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 15ms (Views: 0.4ms | ActiveRecord: 11.0ms)
+
+
+Started GET "/api/v1/climas" for ::1 at 2018-04-05 20:32:43 -0600
+Processing by Api::V1::ClimasController#index as HTML
+  [1m[36mClima Load (0.2ms)[0m  [1m[34mSELECT "climas".* FROM "climas" ORDER BY created_at DESC[0m
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/climas.json" for ::1 at 2018-04-05 20:33:18 -0600
+Processing by Api::V1::ClimasController#index as JSON
+  [1m[36mClima Load (0.2ms)[0m  [1m[34mSELECT "climas".* FROM "climas" ORDER BY created_at DESC[0m
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/climas.json" for ::1 at 2018-04-05 20:33:23 -0600
+Processing by Api::V1::ClimasController#index as JSON
+  [1m[36mClima Load (0.5ms)[0m  [1m[34mSELECT "climas".* FROM "climas" ORDER BY created_at DESC[0m
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/climas.json" for ::1 at 2018-04-05 20:34:02 -0600
+Processing by Api::V1::ClimasController#index as JSON
+  [1m[36mClima Load (0.4ms)[0m  [1m[34mSELECT "climas".* FROM "climas" ORDER BY created_at DESC[0m
+Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/api/v1/climas" for ::1 at 2018-04-05 20:34:50 -0600
+Processing by Api::V1::ClimasController#create as HTML
+  Parameters: {"clima"=>{"ciudad"=>"", "temp"=>"", "estado"=>""}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "climas" ("ciudad", "estado", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["ciudad", ""], ["estado", ""], ["created_at", "2018-04-06 02:34:50.902946"], ["updated_at", "2018-04-06 02:34:50.902946"]]
+  [1m[35m (10.9ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 17ms (Views: 0.7ms | ActiveRecord: 11.9ms)
+
+
+Started PUT "/api/v1/climas/14" for ::1 at 2018-04-05 20:35:08 -0600
+Processing by Api::V1::ClimasController#update as HTML
+  Parameters: {"clima"=>{"ciudad"=>"Gracias a Dios", "temp"=>nil, "estado"=>""}, "id"=>"14"}
+  [1m[36mClima Load (0.1ms)[0m  [1m[34mSELECT  "climas".* FROM "climas" WHERE "climas"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "climas" SET "ciudad" = ?, "updated_at" = ? WHERE "climas"."id" = ?[0m  [["ciudad", "Gracias a Dios"], ["updated_at", "2018-04-06 02:35:08.071445"], ["id", 14]]
+  [1m[35m (10.9ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 17ms (Views: 1.1ms | ActiveRecord: 11.6ms)
+
+
+Started PUT "/api/v1/climas/14" for ::1 at 2018-04-05 20:35:11 -0600
+Processing by Api::V1::ClimasController#update as HTML
+  Parameters: {"clima"=>{"ciudad"=>"Gracias a Dios", "temp"=>nil, "estado"=>""}, "id"=>"14"}
+  [1m[36mClima Load (0.1ms)[0m  [1m[34mSELECT  "climas".* FROM "climas" WHERE "climas"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.3ms)
+
+
+Started PUT "/api/v1/climas/14" for ::1 at 2018-04-05 20:35:17 -0600
+Processing by Api::V1::ClimasController#update as HTML
+  Parameters: {"clima"=>{"ciudad"=>"Gracias a Dios", "temp"=>"38", "estado"=>""}, "id"=>"14"}
+  [1m[36mClima Load (0.1ms)[0m  [1m[34mSELECT  "climas".* FROM "climas" WHERE "climas"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[33mUPDATE "climas" SET "temp" = ?, "updated_at" = ? WHERE "climas"."id" = ?[0m  [["temp", 38], ["updated_at", "2018-04-06 02:35:17.514078"], ["id", 14]]
+  [1m[35m (7.7ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 14ms (Views: 0.8ms | ActiveRecord: 8.7ms)
+
+
+Started PUT "/api/v1/climas/14" for ::1 at 2018-04-05 20:35:20 -0600
+Processing by Api::V1::ClimasController#update as HTML
+  Parameters: {"clima"=>{"ciudad"=>"Gracias a Dios", "temp"=>"38", "estado"=>""}, "id"=>"14"}
+  [1m[36mClima Load (0.2ms)[0m  [1m[34mSELECT  "climas".* FROM "climas" WHERE "climas"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started PUT "/api/v1/climas/14" for ::1 at 2018-04-05 20:35:26 -0600
+Processing by Api::V1::ClimasController#update as HTML
+  Parameters: {"clima"=>{"ciudad"=>"Gracias a Dios", "temp"=>"38", "estado"=>"lluvioso"}, "id"=>"14"}
+  [1m[36mClima Load (0.2ms)[0m  [1m[34mSELECT  "climas".* FROM "climas" WHERE "climas"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[33mUPDATE "climas" SET "estado" = ?, "updated_at" = ? WHERE "climas"."id" = ?[0m  [["estado", "lluvioso"], ["updated_at", "2018-04-06 02:35:26.923695"], ["id", 14]]
+  [1m[35m (12.4ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 19ms (Views: 0.4ms | ActiveRecord: 13.7ms)
+
+
+Started PUT "/api/v1/climas/14" for ::1 at 2018-04-05 20:35:47 -0600
+Processing by Api::V1::ClimasController#update as HTML
+  Parameters: {"clima"=>{"ciudad"=>"Gracias a Dios", "temp"=>"38", "estado"=>"lluvioso"}, "id"=>"14"}
+  [1m[36mClima Load (0.2ms)[0m  [1m[34mSELECT  "climas".* FROM "climas" WHERE "climas"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started PUT "/api/v1/climas/14" for ::1 at 2018-04-05 20:35:53 -0600
+Processing by Api::V1::ClimasController#update as HTML
+  Parameters: {"clima"=>{"ciudad"=>"Gracias a Dios", "temp"=>"38", "estado"=>"lluvioso"}, "id"=>"14"}
+  [1m[36mClima Load (0.2ms)[0m  [1m[34mSELECT  "climas".* FROM "climas" WHERE "climas"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 5ms (Views: 1.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/v1/climas.json" for ::1 at 2018-04-05 20:35:56 -0600
+Processing by Api::V1::ClimasController#index as JSON
+  [1m[36mClima Load (0.5ms)[0m  [1m[34mSELECT "climas".* FROM "climas" ORDER BY created_at DESC[0m
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/api/v1/climas" for ::1 at 2018-04-05 20:35:59 -0600
+Processing by Api::V1::ClimasController#create as HTML
+  Parameters: {"clima"=>{"ciudad"=>"", "temp"=>"", "estado"=>""}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "climas" ("ciudad", "estado", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["ciudad", ""], ["estado", ""], ["created_at", "2018-04-06 02:35:59.408439"], ["updated_at", "2018-04-06 02:35:59.408439"]]
+  [1m[35m (9.2ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 15ms (Views: 0.7ms | ActiveRecord: 9.9ms)
+
+
+Started PUT "/api/v1/climas/15" for ::1 at 2018-04-05 20:36:05 -0600
+Processing by Api::V1::ClimasController#update as HTML
+  Parameters: {"clima"=>{"ciudad"=>"Valle", "temp"=>nil, "estado"=>""}, "id"=>"15"}
+  [1m[36mClima Load (0.1ms)[0m  [1m[34mSELECT  "climas".* FROM "climas" WHERE "climas"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "climas" SET "ciudad" = ?, "updated_at" = ? WHERE "climas"."id" = ?[0m  [["ciudad", "Valle"], ["updated_at", "2018-04-06 02:36:05.864759"], ["id", 15]]
+  [1m[35m (8.2ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 13ms (Views: 0.4ms | ActiveRecord: 8.7ms)
+
+
+Started PUT "/api/v1/climas/15" for ::1 at 2018-04-05 20:36:09 -0600
+Processing by Api::V1::ClimasController#update as HTML
+  Parameters: {"clima"=>{"ciudad"=>"Valle", "temp"=>nil, "estado"=>""}, "id"=>"15"}
+  [1m[36mClima Load (0.1ms)[0m  [1m[34mSELECT  "climas".* FROM "climas" WHERE "climas"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.3ms)
+
+
+Started PUT "/api/v1/climas/15" for ::1 at 2018-04-05 20:36:15 -0600
+Processing by Api::V1::ClimasController#update as HTML
+  Parameters: {"clima"=>{"ciudad"=>"Valle", "temp"=>nil, "estado"=>""}, "id"=>"15"}
+  [1m[36mClima Load (0.2ms)[0m  [1m[34mSELECT  "climas".* FROM "climas" WHERE "climas"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.3ms)
+
+
+Started PUT "/api/v1/climas/15" for ::1 at 2018-04-05 20:36:18 -0600
+Processing by Api::V1::ClimasController#update as HTML
+  Parameters: {"clima"=>{"ciudad"=>"Valle", "temp"=>nil, "estado"=>""}, "id"=>"15"}
+  [1m[36mClima Load (0.2ms)[0m  [1m[34mSELECT  "climas".* FROM "climas" WHERE "climas"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 3ms (Views: 1.0ms | ActiveRecord: 0.3ms)
+
+
+Started PUT "/api/v1/climas/15" for ::1 at 2018-04-05 20:37:56 -0600
+Processing by Api::V1::ClimasController#update as HTML
+  Parameters: {"clima"=>{"ciudad"=>"Valle", "temp"=>nil, "estado"=>""}, "id"=>"15"}
+  [1m[36mClima Load (0.2ms)[0m  [1m[34mSELECT  "climas".* FROM "climas" WHERE "climas"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.3ms)
+
+
+Started PUT "/api/v1/climas/15" for ::1 at 2018-04-05 20:38:04 -0600
+Processing by Api::V1::ClimasController#update as HTML
+  Parameters: {"clima"=>{"ciudad"=>"Valle", "temp"=>"40", "estado"=>""}, "id"=>"15"}
+  [1m[36mClima Load (0.1ms)[0m  [1m[34mSELECT  "climas".* FROM "climas" WHERE "climas"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "climas" SET "temp" = ?, "updated_at" = ? WHERE "climas"."id" = ?[0m  [["temp", 40], ["updated_at", "2018-04-06 02:38:04.103923"], ["id", 15]]
+  [1m[35m (10.9ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 16ms (Views: 0.4ms | ActiveRecord: 11.3ms)
+
+
+Started PUT "/api/v1/climas/15" for ::1 at 2018-04-05 20:38:10 -0600
+Processing by Api::V1::ClimasController#update as HTML
+  Parameters: {"clima"=>{"ciudad"=>"Valle", "temp"=>"40", "estado"=>"Soleado"}, "id"=>"15"}
+  [1m[36mClima Load (0.1ms)[0m  [1m[34mSELECT  "climas".* FROM "climas" WHERE "climas"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[33mUPDATE "climas" SET "estado" = ?, "updated_at" = ? WHERE "climas"."id" = ?[0m  [["estado", "Soleado"], ["updated_at", "2018-04-06 02:38:10.613395"], ["id", 15]]
+  [1m[35m (8.1ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 14ms (Views: 0.8ms | ActiveRecord: 9.3ms)
+
+
+Started GET "/api/v1/climas.json" for ::1 at 2018-04-05 20:42:04 -0600
+Processing by Api::V1::ClimasController#index as JSON
+  [1m[36mClima Load (0.2ms)[0m  [1m[34mSELECT "climas".* FROM "climas" ORDER BY created_at DESC[0m
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/climas" for ::1 at 2018-04-05 20:48:22 -0600
+Processing by Api::V1::ClimasController#index as HTML
+  [1m[36mClima Load (0.3ms)[0m  [1m[34mSELECT "climas".* FROM "climas" ORDER BY created_at DESC[0m
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/climas" for ::1 at 2018-04-05 21:02:50 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::ClimasController#index as HTML
+  [1m[36mClima Load (0.2ms)[0m  [1m[34mSELECT "climas".* FROM "climas" ORDER BY created_at DESC[0m
+Completed 200 OK in 12ms (Views: 9.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/v1/climas" for ::1 at 2018-04-05 21:02:51 -0600
+Processing by Api::V1::ClimasController#index as HTML
+  [1m[36mClima Load (0.2ms)[0m  [1m[34mSELECT "climas".* FROM "climas" ORDER BY created_at DESC[0m
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/climas" for ::1 at 2018-04-05 21:02:52 -0600
+Processing by Api::V1::ClimasController#index as HTML
+  [1m[36mClima Load (0.3ms)[0m  [1m[34mSELECT "climas".* FROM "climas" ORDER BY created_at DESC[0m
+Completed 200 OK in 4ms (Views: 3.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/climas.json" for ::1 at 2018-04-05 21:03:14 -0600
+Processing by Api::V1::ClimasController#index as JSON
+  [1m[36mClima Load (0.2ms)[0m  [1m[34mSELECT "climas".* FROM "climas" ORDER BY created_at DESC[0m
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/api/v1/climas" for ::1 at 2018-04-05 21:03:21 -0600
+Processing by Api::V1::ClimasController#create as HTML
+  Parameters: {"clima"=>{"ciudad"=>"", "temp"=>"", "estado"=>""}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (7.9ms)[0m  [1m[32mINSERT INTO "climas" ("ciudad", "estado", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["ciudad", ""], ["estado", ""], ["created_at", "2018-04-06 03:03:21.459706"], ["updated_at", "2018-04-06 03:03:21.459706"]]
+  [1m[35m (6.7ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 19ms (Views: 0.8ms | ActiveRecord: 14.7ms)
+
+
+Started PUT "/api/v1/climas/16" for ::1 at 2018-04-05 21:03:27 -0600
+Processing by Api::V1::ClimasController#update as HTML
+  Parameters: {"clima"=>{"ciudad"=>"Choluteca", "temp"=>nil, "estado"=>""}, "id"=>"16"}
+  [1m[36mClima Load (0.2ms)[0m  [1m[34mSELECT  "climas".* FROM "climas" WHERE "climas"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[33mUPDATE "climas" SET "ciudad" = ?, "updated_at" = ? WHERE "climas"."id" = ?[0m  [["ciudad", "Choluteca"], ["updated_at", "2018-04-06 03:03:27.982969"], ["id", 16]]
+  [1m[35m (10.6ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 17ms (Views: 0.4ms | ActiveRecord: 11.6ms)
+
+
+Started PUT "/api/v1/climas/16" for ::1 at 2018-04-05 21:03:35 -0600
+Processing by Api::V1::ClimasController#update as HTML
+  Parameters: {"clima"=>{"ciudad"=>"Choluteca", "temp"=>"42", "estado"=>""}, "id"=>"16"}
+  [1m[36mClima Load (0.2ms)[0m  [1m[34mSELECT  "climas".* FROM "climas" WHERE "climas"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "climas" SET "temp" = ?, "updated_at" = ? WHERE "climas"."id" = ?[0m  [["temp", 42], ["updated_at", "2018-04-06 03:03:35.089598"], ["id", 16]]
+  [1m[35m (8.5ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 14ms (Views: 0.3ms | ActiveRecord: 9.4ms)
+
+
+Started PUT "/api/v1/climas/16" for ::1 at 2018-04-05 21:03:43 -0600
+Processing by Api::V1::ClimasController#update as HTML
+  Parameters: {"clima"=>{"ciudad"=>"Choluteca", "temp"=>"42", "estado"=>"Soleado"}, "id"=>"16"}
+  [1m[36mClima Load (0.2ms)[0m  [1m[34mSELECT  "climas".* FROM "climas" WHERE "climas"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "climas" SET "estado" = ?, "updated_at" = ? WHERE "climas"."id" = ?[0m  [["estado", "Soleado"], ["updated_at", "2018-04-06 03:03:43.438935"], ["id", 16]]
+  [1m[35m (8.2ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 15ms (Views: 1.2ms | ActiveRecord: 8.7ms)
+
+
+Started GET "/api/v1/climas" for ::1 at 2018-04-05 21:03:50 -0600
+Processing by Api::V1::ClimasController#index as HTML
+  [1m[36mClima Load (0.3ms)[0m  [1m[34mSELECT "climas".* FROM "climas" ORDER BY created_at DESC[0m
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.3ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "climas" ("ciudad", "temp", "estado", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["ciudad", "Tegucigalpa"], ["temp", 32], ["estado", "lluvioso"], ["created_at", "2018-04-06 05:19:57.013639"], ["updated_at", "2018-04-06 05:19:57.013639"]]
+  [1m[35m (7.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "climas" ("ciudad", "temp", "estado", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["ciudad", "San Pedro Sula"], ["temp", 36], ["estado", "Soleado"], ["created_at", "2018-04-06 05:19:57.022823"], ["updated_at", "2018-04-06 05:19:57.022823"]]
+  [1m[35m (7.1ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/api/v1/climas" for ::1 at 2018-04-05 23:24:00 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::ClimasController#index as HTML
+  [1m[36mClima Load (0.2ms)[0m  [1m[34mSELECT "climas".* FROM "climas" ORDER BY created_at DESC[0m
+Completed 200 OK in 9ms (Views: 6.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/favicon.ico" for ::1 at 2018-04-05 23:24:00 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
